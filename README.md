@@ -4,13 +4,10 @@ Garmin's software sucks, so I wrote a script that interfaces with other develope
 
 
 ## Installation
-[Download GcpUploader]
-
-unzip GcpUploader to /opt/pygupload
-
-create a symbolic link, sudo ln -s /opt/pygupload/gupload.py /usr/local/bin/gupload.py
-
-cd into /opt/pygupload and run `setup.py install`
+* [Download GcpUploader]
+* unzip GcpUploader to /opt/pygupload
+* create a symbolic link, sudo ln -s /opt/pygupload/gupload.py /usr/local/bin/gupload.py
+* cd into /opt/pygupload and run `setup.py install`
 
 
 
@@ -18,9 +15,12 @@ cd into /opt/pygupload and run `setup.py install`
 
 ## Usage
 * Create a .guploadrc file in your workspace with contents that look like this
-> [Credentials]
-> username=<username>
-> password=<password>
+
+```java
+[Credentials]
+username=<username>
+password=<password>
+```
 
 * Run `upload.bash` located in the projects root directory
 
