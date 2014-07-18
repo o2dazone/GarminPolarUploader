@@ -17,7 +17,15 @@ cd into /opt/pygupload and run `setup.py install`
 
 
 ## Usage
-* Run `upload.bash` located in the projects root directory
+Create a .guploadrc file in your workspace with contents that look like this
+
+```java
+[Credentials]
+username=<username>
+password=<password>
+```
+
+Run `upload.bash` located in the projects root directory
 
 Alternatively, you can setup a [launchd command to help]
 
