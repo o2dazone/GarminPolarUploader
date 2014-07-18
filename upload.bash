@@ -43,7 +43,7 @@ fi
 
 
 # copy latest files to the download directory
-# cp $LATEST $DLDIR
+cp $LATEST $DLDIR
 
 
 # upload to garmin
@@ -53,7 +53,7 @@ terminal-notifier -message "Uploaded $LATEST --- Converting to HRM" -title "Uplo
 
 
 # convert garmin data to Polar hrm data
-sh $WORKINGDIR/g2p/bin/g2p.sh && (terminal-notifier -message "Completed fit -> hrm conversion" -title "FIT -> HRM" &> /dev/null || echo "Completed fit -> hrm conversion")
+sh $WORKINGDIR/GarminToPolar/bin/g2p.sh && (terminal-notifier -message "Completed fit -> hrm conversion" -title "FIT -> HRM" &> /dev/null || echo "Completed fit -> hrm conversion")
 
 
 # unmount disks
