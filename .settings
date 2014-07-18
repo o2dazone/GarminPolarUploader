@@ -1,0 +1,23 @@
+export DLDIR=$WORKINGDIR'/act' # where your activities will be copied to locally
+
+# A list of paths to your device once its mounted. One line per device.
+DEVICEDIRS=(
+  '/Volumes/GARMIN/Garmin/Activities' # edge 800
+  '/Volumes/GARMIN/GARMIN/ACTIVITY'   # fr 620
+  #$WORKINGDIR'/act'                  #local location, for testing
+)
+
+# how much time back you should look for new files - ex: 1d, 4h, 5m
+TIME='6h'
+
+# pattern to match on, *.fit, *.gpx, etc
+export PATTERN="*.fit"
+
+# id to export with, I have no idea what this does
+export ID="e800"
+
+# current year
+year=$(date "+%Y")
+
+# location of HRM data
+export POLARDIR=$WORKINGDIR'/hrm'
