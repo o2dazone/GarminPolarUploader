@@ -1,6 +1,6 @@
 # Garmin Uploader and Polar Converter
 
-Garmin's software sucks, so I wrote a script. Also use other software to convert FIT data to HRM and pops open a Polar uploader
+Garmin's software sucks, so I wrote a script that interfaces with other developers' software. Does everything Garmin software does but more!
 
 
 ## Installation
