@@ -8,7 +8,7 @@ DEVICEDIRS=(
 )
 
 # how much time back you should look for new files - ex: 1d, 4h, 5m
-TIME='6h'
+TIME='1d'
 
 # pattern to match on, *.fit, *.gpx, etc
 export PATTERN="*.fit"

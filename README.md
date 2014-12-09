@@ -7,27 +7,27 @@ Garmin's software sucks, so I wrote a script that interfaces with other develope
 * [Download GcpUploader]
 * unzip GcpUploader to /opt/pygupload
 * create a symbolic link, sudo ln -s /opt/pygupload/gupload.py /usr/local/bin/gupload.py
-* cd into /opt/pygupload and run `setup.py install`
-
-
-
+* cd into /opt/pygupload and run `sudo setup.py install`
+* Git clone this repo into whatever directory you want
 
 
 ## Usage
-* Create a .guploadrc file in your workspace with contents that look like this
+* Create a .guploadrc file in your cloned repo directory, with your garmin credentials laid out like this:
 
 ```java
 [Credentials]
 username=<username>
 password=<password>
 ```
+** Note: This is stored in plaintext...so anyone with access to your filesystem can see it, maybe set read perms on the file if you want to keep nosy people out
 
 * Run `upload.bash` located in the projects root directory
+**Alternatively, you can setup a [launchd command to help]
 
-Alternatively, you can setup a [launchd command to help]
+* Once this runs, you'll see in your terminal that your data is uploaded to Garmin. After this, it will convert your data over to .hrm files. A client will pop up, asking you to log into your Polar account. Log in, and browse the contents of your computer. Your HRM data should be inside GarminPolarUploader/hrm. Once they're uploaded, a checkbox will appear next to it, indicating that its been uploaded.
 
-
-
+## Configuration
+Default configuration supports Garmin FR 620, and Garmin Edge 800, scanning as far back as 1 full day (24 hours) of activity. If you'd like to add more devices, or change how far back to scan, feel free to alter these properties in the .settings file in the root dir of this project.
 
 
 

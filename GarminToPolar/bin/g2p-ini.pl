@@ -2,7 +2,7 @@
 my %cfgdb;
 
 #------------------------------------------------------------------------
-$cfgdb{USER}{NAME}="Brandon Murry";
+$cfgdb{USER}{NAME}="GarminToPolar";
 @{$cfgdb{USER}{HRZONES}}=([190],[171],[152],[133],[114],[95],[76],[57],[38],[19],[0]);
 @{$cfgdb{USER}{TRIP}}=([0],[0],[0],[0],[0],[0],[0],[0]);
 #print Dumper(%cfgdb);
