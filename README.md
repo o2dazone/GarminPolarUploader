@@ -8,8 +8,7 @@ Garmin's software sucks, so I wrote a script that interfaces with other develope
 * cd into GarminPolarUploader/GcpUploader and run `sudo setup.py install`
 
 ### If you are upgrading versions, you will need to run
-sudo pip install --upgrade GcpUploader
-sudo pip install requests==2.5.3
+sudo pip install --upgrade GcpUploader; sudo pip install requests==2.5.3
 
 ## Usage
 * Create a .guploadrc file in your cloned repo directory, with your garmin credentials laid out like this:
