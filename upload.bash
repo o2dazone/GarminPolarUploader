@@ -50,7 +50,7 @@ cp $LATEST $DLDIR
 
 # upload to garmin
 notify "FIT -> Garmin" "Uploading data to Garmin..." &> /dev/null || echo "Uploading to Garmin..."
-python /usr/local/bin/gupload.py $LATEST
+python GcpUploader/gupload.py $LATEST
 
 # if USEPOLAR is set to false by the user, exit after uploading to Garmin
 if ! $USEPOLAR; then
@@ -60,14 +60,12 @@ fi
 # convert garmin data to Polar hrm data
 sh $WORKINGDIR/GarminToPolar/bin/g2p.sh && (notify "HRM -> Polar" "Upload Complete. Polar Uploader launching" &> /dev/null || echo "Completed fit -> hrm conversion")
 
-
 # unmount disks
 diskutil unmount /Volumes/GARMIN
 diskutil unmount /Volumes/16GB\ SDHC
 
 # pop open polar uploader
 java -jar HRMUploader.jar
-
 
 # if the user sets this variable to false, keep the HRM data after uploading to Polar
 if $DELETEHRMAFTERUPLOAD; then

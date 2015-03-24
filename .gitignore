@@ -1,4 +1,5 @@
 .guploadrc
 act/*.*
 hrm/*.*
+.DS_Store
 GarminToPolar/tmp/*

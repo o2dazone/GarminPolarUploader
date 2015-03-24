@@ -4,12 +4,12 @@ Garmin's software sucks, so I wrote a script that interfaces with other develope
 
 
 ## Installation
-* [Download GcpUploader]
-* unzip GcpUploader to /opt/pygupload
-* create a symbolic link, sudo ln -s /opt/pygupload/gupload.py /usr/local/bin/gupload.py
-* cd into /opt/pygupload and run `sudo setup.py install`
 * Git clone this repo into whatever directory you want
+* cd into GarminPolarUploader/GcpUploader and run `sudo setup.py install`
 
+### If you are upgrading versions, you will need to run
+sudo pip install --upgrade GcpUploader
+sudo pip install requests==2.5.3
 
 ## Usage
 * Create a .guploadrc file in your cloned repo directory, with your garmin credentials laid out like this:
@@ -21,7 +21,7 @@ password=<password>
 ```
 ** Note: This is stored in plaintext...so anyone with access to your filesystem can see it, maybe set read perms on the file if you want to keep nosy people out
 
-* Run `upload.bash` located in the projects root directory
+* Run `./upload.bash` located in the projects root directory
 **Alternatively, you can setup a [launchd command to help]
 
 * Once this runs, you'll see in your terminal that your data is uploaded to Garmin. After this, it will convert your data over to .hrm files. A client will pop up, asking you to log into your Polar account. Log in, and browse the contents of your computer. Your HRM data should be inside GarminPolarUploader/hrm. Once they're uploaded, a checkbox will appear next to it, indicating that its been uploaded.
@@ -39,9 +39,8 @@ Default configuration supports Garmin FR 620, and Garmin Edge 800, scanning as f
 
 
 
-
-[launchd command to help]:http://alvinalexander.com/mac-os-x/launchd-examples-launchd-plist-file-examples-mac
 [Garmin Uploader]:http://sourceforge.net/p/gcpuploader/wiki/Home/
+[launchd command to help]:http://alvinalexander.com/mac-os-x/launchd-examples-launchd-plist-file-examples-mac
 [FIT to HRM conversion]:https://github.com/erlendleganger/g2p
 [Polar Uploader]:https://github.com/1ka/HRMUploader
 [Download GcpUploader]:https://pypi.python.org/pypi?:action=display&name=GcpUploader
